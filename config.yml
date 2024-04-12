@@ -1,0 +1,20 @@
+model: timm               # mlp, cnn, timm, mlflow
+timm_model_name: resnet18 # model=timmの場合に事前学習済みモデルの名前を指定
+mlflow_model_url: null    # model=mlflowの場合に事前学習済みモデルのURLを指定
+dataset: mnist            # mnist, cifar10, cifar100, imagenet1k
+train_mode: analog        # digital, analog (=QAT)
+quantization_type: affine # analogvnn, symmetric, affine
+device: cuda              # cpu, cuda, (or cuda:0, cuda:1, ...)
+data_parallel: True       # マルチGPU環境で高速化したい場合Trueを指定
+epochs: 0                 # 学習エポック数
+log_dir: null             # ローカルにログを出力したい場合はディレクトリ名を指定
+save_interval: 10         # ローカルにモデルを出力したい場合にlog_dirと共に指定し、何エポック毎に保存するかを指定
+saved_model: null         # ローカルの学習済みモデルを使用したい場合は位置を指定
+lr: 0.001                 # 学習率
+batch: 128                # バッチサイズ
+mlflow_url: http://192.168.63.34  # mlflowを使用する場合はサーバーのURLを指定
+mlflow_experiment_name: hoge      # mlflowを使用する場合は実験名を指定
+commit_hash: hoge                 # git管理下においてコミットと関連付ける場合は指定
+in_bit: 2                 # 量子化ビット幅を指定
+std: 0.0                  # ノイズの量を指定
+count: 0                  # このconfigにおける実験を何回繰り返すか指定

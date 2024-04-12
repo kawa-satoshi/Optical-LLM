@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+torch = "*"
+torchvision = "*"
+scipy = "*"
+packaging = "*"
+einops = "*"
+mlflow = "*"
+tqdm = "*"
+seaborn = "*"
+jupyter = "*"
+diffusers = "*"
+transformers = "*"
+peft = "*"
+timm = "*"
+torchmetrics = {extras = ["image"], version = "*"}
+datasets = {extras = ["vision"], version = "*"}
+evaluate = "*"
+
+[dev-packages]
+tensorboard = "*"
+pyproject-flake8 = "*"
+black = "*"
+mypy = "*"
+isort = "*"
+
+[requires]
+python_version = "3"
